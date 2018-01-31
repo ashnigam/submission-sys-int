@@ -228,7 +228,7 @@ def update_velocity(wps_update, curr_pose_wp_idx,traffic_wp_idx):
                                       wps_update.traffic_light_wp_idx)
         reduced_wp_vel = curr_vel
 
-        for wp_cnt in range(curr_pose_wp_idx, traffic_wp_idx+1):
+        for wp_cnt in range(curr_pose_wp_idx, traffic_wp_idx):
 
             wp = wps_update.waypoints_list[wp_cnt]
             curr_indx = wp_cnt
