@@ -247,7 +247,7 @@ def update_velocity(wps_update, curr_pose_wp_idx,traffic_wp_idx):
             #rospy.loginfo("curr_indx: %d red_val%f, step:%f  %f %f", curr_indx, reduced_wp_vel,
             #                step, total_distance, dist_step)
 
-            if reduced_wp_vel < 0.1:
+            if reduced_wp_vel < 0.01:
                 reduced_wp_vel = 0
             #reduced_wp_vel = max(0, reduced_wp_vel)
             wps_update.set_waypoint_velocity(wps_update.waypoints_list, curr_indx + 1, reduced_wp_vel)
